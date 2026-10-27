@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bajrang Motors · transformation film (render page)</title>
+  <!--
+    Render page for the transformation film. Not part of the website build.
+    scripts/render-film.mjs opens it in headless Chrome, calls window.film.render(t)
+    for every frame and screenshots the 1920×1080 stage. Open it in the dev server
+    (http://localhost:5173/video/film.html?t=12.5) to preview any moment.
+  -->
+  <style>
+    html, body { margin: 0; background: #000; overflow: hidden; }
+    .stage { position: relative; width: 100vw; height: 100vh; overflow: hidden; background: #050607; }
+    .layer { position: absolute; inset: 0; }
+    .layer img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 50%; }
+    canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .grade {
+      pointer-events: none;
+      background: radial-gradient(ellipse 75% 70% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+    }
+    .label {
+      position: absolute; left: 4.2vw; bottom: 6vh;
+      display: flex; gap: 1.1vw; align-items: baseline;
+      font-family: 'JetBrains Mono', monospace; font-size: 1.15vw; letter-spacing: 0.16em; text-transform: uppercase;
+      color: #ece8e1; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.8);
+    }
+    .label b { color: #2aa6e6; font-weight: 400; }
+    .label::before { content: ''; width: 2.2vw; height: 1px; background: #2aa6e6; align-self: center; }
+    .tag {
+      position: absolute; padding: 0.5vw 0.8vw;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.85vw; letter-spacing: 0.12em; text-transform: uppercase;
+      color: #ffb54a; border: 1px solid #ffb54a; background: rgba(10, 12, 15, 0.6); border-radius: 2px;
+    }
+    .tag--ok { color: #57e3a6; border-color: #57e3a6; }
+    .title { position: absolute; left: 0; right: 0; top: 13vh; text-align: center; color: #ece8e1; }
+    .title__brand {
+      margin: 0; font-family: 'Archivo Variable', sans-serif; font-variation-settings: 'wdth' 62; font-weight: 900;
+      font-size: 8.6vw; line-height: 0.86; letter-spacing: 0.005em; text-transform: uppercase;
+      text-shadow: 0 8px 50px rgba(0, 0, 0, 0.5);
+    }
+    .title__line {
+      margin: 1.6vh 0 0; font-family: 'Archivo Variable', sans-serif; font-variation-settings: 'wdth' 70; font-weight: 800;
+      font-size: 2.6vw; text-transform: uppercase; color: #ff4d1f; letter-spacing: 0.01em;
+    }
+    .title__meta {
+      margin: 2.4vh 0 0; font-family: 'JetBrains Mono', monospace; font-size: 0.95vw; letter-spacing: 0.18em;
+      text-transform: uppercase; color: #c9cfd5;
+    }
+    .dip { background: #000; pointer-events: none; }
+    .flash { background: #fff; pointer-events: none; mix-blend-mode: screen; }
+  </style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <div class="layer" id="plate"><img alt="" /></div>
+    <canvas id="gl"></canvas>
+    <div class="layer" id="photoA"><img alt="" /></div>
+    <div class="layer" id="photoB"><img alt="" /></div>
+    <div class="layer grade"></div>
+    <div class="tag" id="tagDent" style="left:9vw;top:78vh">Front bumper · dent &amp; scratches</div>
+    <div class="tag tag--ok" id="tagOk" style="left:62vw;top:72vh">Panel restored · paint polished</div>
+    <div class="label" id="label"><b id="labelNum">01</b><span id="labelText"></span></div>
+    <div class="title" id="title">
+      <p class="title__brand">Bajrang Motors</p>
+      <p class="title__line">Let's get you back on the road.</p>
+      <p class="title__meta">Hindorna Chokdi, Rajula · +91 98259 52459</p>
+    </div>
+    <div class="layer flash" id="flash"></div>
+    <div class="layer dip" id="dip"></div>
+  </div>
+  <script type="module" src="./film.js"></script>
+</body>
+</html>

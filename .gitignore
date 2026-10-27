@@ -1,0 +1,4 @@
+node_modules/
+dist/
+image/.i20-*.glb
+video/.frames/

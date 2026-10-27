@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+     <!-- font awesome framework link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+</head>
+<body>
+    
+<header class="header">
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <a  class="animated infinite heartBeat delay-2s"> <span><b>Bajrang</span> Motors </b></a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#vehicles">vehicles</a>
+        <a href="#services">services</a>
+        <a href="#featured">Collection of Car</a>
+        <a href="#reviews">reviews</a>
+        <a href="#reviews">Quick Tour</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div id="login-btn">
+        <button class="btn">login</button>
+        <i class="far fa-user"></i>
+    </div>
+
+</header> 
+    
+<div class="login-form-container">
+
+    <span id="close-login-form" class="fas fa-times"></span>
+
+    <form action="">
+        <h3>user login</h3>
+        <input type="email" placeholder="enter your email" class="box">
+        <input type="password" placeholder="enter your password" class="box">
+        <p> forget your password <a href="#">click here</a> </p>
+        <input type="submit" value="login" class="btn">
+        <p>or login with</p>
+        <div class="buttons">
+            <a href="#" class="btn"> google </a>
+            <a href="#" class="btn"> facebook </a>
+        </div>
+        <p> don't have an account <a href="#">create one</a> </p>
+    </form>
+
+</div>
+
+<section class="home" id="home">
+
+    <h2 data-speed="-2" class="home-parallax">Maintain Your Car With Bajrang motors
+    </h2>
+
+    <img data-speed="5" class="home-parallax" src="image/home-img.png" alt="">
+
+    <a data-speed="7" href="#vehicles" class="btn home-parallax">explore cars</a>
+
+</section>
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-home"></i>
+        <div class="content">
+            <h3>1</h3>
+            <p>branches</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-car"></i>
+        <div class="content">
+            <h3>5849+</h3>
+            <p>Till Car Repairs</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-users"></i>
+        <div class="content">
+            <h3>99.99%</h3>
+            <p>happy clients</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="vehicles" id="vehicles">
+
+    <h1 class="heading"> popular <span>vehicles <i class="fas fa-car"></i></span> </h1>
+
+    <div class="swiper vehicles-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/vehicle-1.png" alt="">
+                <div class="content">
+                    <h3>Venue Phantom Black</h3>
+                    <div class="price"> <span>price : </span> 8.3 Lakhs </div>
+                    <p>
+                        Old(Used)
+                        <span class="fas fa-circle"></span> 2019
+                        <span class="fas fa-circle"></span> automatic
+                        <span class="fas fa-circle"></span> petrol
+                        <span class="fas fa-circle"></span> 100000 Km used
+                        <span class="fas fa-circle"></span> 1st
+                    </p>
+                    <a href="#" class="btn" onclick="carcall()" id="addcar">More Deatails</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box" >
+                <img src="image/vehicle-2.png" alt="">
+                <div class="content">
+                    <h3>Verna White</h3>
+                    <div class="price"> <span>price : </span> 4lakh </div>
+                    <p>
+                        Old(used)
+                        <span class="fas fa-circle"></span> 2018
+                        <span class="fas fa-circle"></span> manual
+                        <span class="fas fa-circle"></span> Digsel
+                        <span class="fas fa-circle"></span> 150000km
+                        <span class="fas fa-circle"></span> 2nd Owner
+                    </p>
+                    <a href="#" class="btn" onclick="carcall()" id="addcar">More Details</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/vehicle-3.png" alt="">
+                <div class="content">
+                    <h3>i20 old Model</h3>
+                    <div class="price"> <span>price : </span> 2.70Lakhs </div>
+                    <p>
+                        Old(used)
+                        <span class="fas fa-circle"></span> 2016
+                        <span class="fas fa-circle"></span> manual
+                        <span class="fas fa-circle"></span> petrol+cng
+                        <span class="fas fa-circle"></span> 210000km
+                        <span class="fas fa-circle"></span> 2nd owner
+
+                    </p>
+                    <a href="#" class="btn" onclick="carcall()" id="addcar">More Details</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/vehicle-4.png" alt="">
+                <div class="content">
+                    <h3>Swift red color</h3>
+                    <div class="price"> <span>price : </span> 3.10Lakhs </div>
+                    <p>
+                        old(used)
+                        <span class="fas fa-circle"></span> 2014
+                        <span class="fas fa-circle"></span> manual
+                        <span class="fas fa-circle"></span> petrol+cng
+                        <span class="fas fa-circle"></span> 120000km
+                        <span class="fas fa-circle"></span> 1st Owner
+                    </p>
+                    <a href="#" class="btn" onclick="carcall()" id="addcar">More Details</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/vehicle-5.png" alt="">
+                <div class="content">
+                    <h3>Toyoya Yaris old model</h3>
+                    <div class="price"> <span>price : </span> 1.85Lakhs </div>
+                    <p>
+                        Old(used)
+                        <span class="fas fa-circle"></span> 2014
+                        <span class="fas fa-circle"></span> Manual
+                        <span class="fas fa-circle"></span> Digsel
+                        <span class="fas fa-circle"></span> 170000km
+                        <span class="fas fa-circle"></span> 3rd Owner
+
+                    </p>
+                    <a href="#" class="btn" onclick="carcall()" id="addcar">More Details</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/vehicle-6.png" alt="">
+                <div class="content">
+                    <h3>Tata Harrier White color</h3>
+                    <div class="price"> <span>price : </span> 11Lakhs </div>
+                    <p>
+                        Old(used)
+                        <span class="fas fa-circle"></span> 2019
+                        <span class="fas fa-circle"></span> automatic
+                        <span class="fas fa-circle"></span> Digsel
+                        <span class="fas fa-circle"></span> 40000km
+                        <span class="fas fa-circle"></span> 1st Owner
+                    </p>
+                    <p2>*It is Just Refrence You will be redirected 3rd party link Shortly!</p2>
+                    <a href="http://www.olx.in/item/tata-harrier-xz-2019-diesel-iid-1691334123" class="btn">More Details</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<section class="services" id="services">
+
+    <h1 class="heading"> our <span>services <i class="fas fa-tools"></i></span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-car"></i>
+            <h3>Car Wheel Aligment & Balancing</h3>
+            <p>to adjust the wheelalignment with 3D Technology and wheel balancing For increasing Tyre Life & Also Tyre Chnaging.</p>
+            <a href="https://www.tyremarket.com/tyremantra/wheel-alignment-and-wheel-balancing-difference/" class="btn"> read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-tools"></i>
+            <h3>parts & Component repair</h3>
+            <p>Repair and changing the component in suspansion related and other engine Related component.</p>
+            <a href="https://www.engineeringchoice.com/car-suspension/" class="btn"> read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-car-crash"></i>
+            <h3>Accidental Car Advisior</h3>
+            <p>we provide the best and good advise after accident Which is the best car repair center in their cities without any charges its trully free which may help to customer .</p>
+            <a href="#" class="btn"> read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-car-battery"></i>
+            <h3>old battery replacement</h3>
+            <p>when the old battery is got worse  & other battery related issues like leaked bettry water and etc. this type of issues fix here.</p>
+            <a href="https://gomechanic.in/blog/when-to-replace-car-battery/?amp=1" class="btn"> read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-gas-pump"></i>
+            <h3>oil change</h3>
+            <p>we provide oil changing service and other oil related component change like oil filter,digsel filter and coolent.</p>
+            <a href="https://www.audielpaso.com/benefits-of-routine-oil-changes.htm" class="btn"> read more</a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-headset"></i>
+            <h3>Opening Days</h3>
+            <p>All Times shops open Except sunday beacause suday is holiday.. and timing is 8am to 8pm</p>
+            <a href="https://g.co/kgs/4vwiM4" class="btn"> read more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Collection of</span> cars <i class="fas fa-car"></i> </h1>
+    <h3><b>*Provide Rating in Stars based on Car's Conditions</b></h3>
+
+    <div class="swiper featured-slider">
+
+       <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/car-1.png" alt="">
+                <div class="content">
+                    <h3>Toyota Innova OLD</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="price">5.6Lakhs/-</div>
+                    
+                    <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-2.png" alt="">
+                <div class="content">
+                    <h3>Tata Indica Old</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        
+                       
+                    </div>
+                    <div class="price">50,000/-</div>
+                    
+                    <a href="http://www.olx.in/item/tata-indica-2009-iid-1691606498" class="btn">check out</a></br>
+                    <p2>*It is Just Refrence You will be redirected 3rd party link Shortly!</p2>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-3.png" alt="">
+                <div class="content">
+                    <h3>Suzuki Sx4 old</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        
+                       
+                    </div>
+                    <div class="price">1.40Lakhs/-</div>
+                    <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-4.png" alt="">
+                <div class="content">
+                    <h3>Nisan Sunny old</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                       
+                    </div>
+                    <div class="price">2.35Lakhs/-</div>
+                    <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                </div>
+            </div>
+
+       </div>
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-5.png" alt="">
+                 <div class="content">
+                     <h3>Hyundai Creta Old</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                     </div>
+                     <div class="price">7.44Lakhs/-</div>
+                     <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-6.png" alt="">
+                 <div class="content">
+                     <h3>Hyundai Vitara Brezza </h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                         <i class="far fa-star"></i>
+                       
+                     </div>
+                     <div class="price">4.20lakhs/-</div>
+                     <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-7.png" alt="">
+                 <div class="content">
+                     <h3>Tata Tiago Orange color</h3>
+                     <div class="stars">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="far fa-star"></i>
+                         <i class="far fa-star"></i>
+                        
+                     </div>
+                     <div class="price">2.45Lakhs/-</div>
+                     <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                 </div>
+             </div>
+ 
+             <div class="swiper-slide box">
+                 <img src="image/car-8.png" alt="">
+                 <div class="content">
+                     <h3>Alto 800 parrot green</h3>
+                     <div class="stars">
+                      
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star-half-alt"></i>
+                         <i class="far fa-star"></i>
+                         <i class="far fa-star"></i>
+                         
+                     </div>
+                     <div class="price">1.50lakhs/-</div>
+                     <a href="#" class="btn"  onclick="carcall()" id="addcar">check out</a>
+                 </div>
+             </div>
+ 
+        </div>
+ 
+        <div class="swiper-pagination"></div>
+ 
+     </div>
+
+</section>
+
+<section class="newsletter">
+    
+    <h3>subscribe for latest updates <i class="fas fa-envelope"></i></h3>
+    <p>Enter your mail and remind you when your car is ready & up to date.</p>
+
+   <form onsubmit="reminder()">
+        <input type="email" placeholder="enter your email" id="userreminder">
+        <input type="submit" value="subscribe">
+   </form>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"> client's <span>review <i class="fas fa-star"></i></span> </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/pic-1.png" alt="">
+                <div class="content">
+                    <p>best service in the town and good expirience. </p>
+                    <h3>Dhruv Tilva</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/pic-2.png" alt="">
+                <div class="content">
+                    <p>nice experience...best services...first and new technology based n 3D wheel alignment..</p>
+                    <h3>yash vachhani</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/pic-3.png" alt="">
+                <div class="content">
+                    <p>not only good services also provide right advise to maintain your vehicle for smooth experience.</p>
+                    <h3>manish tank</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        
+                       
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/pic-4.png" alt="">
+                <div class="content">
+                    <p>fast and good worker staff and also give frequent reply and provide good resolution.</p>
+                    <h3>jigar vithhani</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/pic-5.png" alt="">
+                <div class="content">
+                    <p>i was expirience full suspansion service of hyundai Venue and i am satisfied and at affortable price.</p>
+                    <h3>jignesh shiyal</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/pic-6.png" alt="">
+                <div class="content">
+                    <p>i was expirience the changing tyre for my car it was good and provide frequent changing with technology machines.</p>
+                    <h3>Vishal Singh</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<section class="reviews" id="reviews">
+
+    <h1 class="heading"> Quick Shop <span>Tour <i class="fas fa-car"></i></span> </h1>
+
+    <div class="swiper review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/1maingate.jpg" alt="">
+                <div class="content">
+                    
+                    <h3>Main Gate Section</h3>
+                    
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/3engine works.jpg" alt="">
+                <div class="content">
+                    
+                    <h3>Engine Work Section</h3>
+                    
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/tyre changer.jpg" alt="">
+                <div class="content">
+                    
+                    <h3>Tyre Changer Section</h3>
+                    
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/suspansion.jpg" alt="">
+                <div class="content">
+                    
+                    <h3>Suspansion Work Section</h3>
+                    
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/4 balancing.jpg" alt="">
+                <div class="content">
+                   
+                    <h3>Wheel Balancing Section</h3>
+                    
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/2wheelalignment.jpg" alt="">
+                <div class="content">
+                    
+                    <h3>3D wheel Aligment Section</h3>
+                    
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"><span>contact</span> us <i class="fas fa-phone"></i> </h1>
+
+    <div class="row">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.388319481784!2d71.43310661338731!3d21.01714289355416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be24561b9f1872b%3A0x3992109ef3d64f01!2sBAJRANG%20MOTORS!5e0!3m2!1sen!2sin!4v1655902915766!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- <form onsubmit="callvalue()"> -->
+        <form action="https://formsubmit.co/el/jafuta" method="POST">
+            <h3>Car Pickup Form</h3>
+            <!-- <input type="text" placeholder="your name and mobile number" class="box" id="uname">
+            <input type="email" placeholder="your email" class="box" id="uemail" required>
+            
+            <input type="tel" placeholder="issue description" class="box" id="issue">
+            <textarea placeholder="car deatails with car pickup location" class="box" id="location" cols="30" rows="10"></textarea> -->
+            <a href="https://formsubmit.co/el/jafuta" class="btn">Fill Pickup-Form Now</a>
+        </form>
+
+
+    </div>
+
+</section>
+
+<section class="footer" id="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="https://www.google.com/search?q=bajrang+motors+rajula&sxsrf=ALiCzsbdeDjqhj2eWrp-f4m3aGpiR6IVPQ%3A1655904040552&ei=KBezYruoIbKEr7wPx4misAQ&oq=BAJRANG+MOTORS&gs_lcp=ChNtb2JpbGUtZ3dzLXdpei1zZXJwEAEYADIECCMQJzIECCMQJzILCC4QgAQQxwEQrwEyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQRxCwAzoHCCMQ6gIQJzoKCC4QxwEQrwEQJzoKCC4QxwEQ0QMQJzoECAAQQzoICAAQsQMQgwE6CwguEIAEELEDEIMBOgsILhCABBDHARCjAjoFCAAQkQI6CgguEMcBENEDEEM6CwgAEIAEELEDEIMBOhEILhCABBCxAxCDARDHARCjAjoICAAQgAQQyQM6BQgAEJIDOggIABCxAxCRAjoICC4QgAQQsQM6DgguEIAEELEDEIMBENQCOgUILhCABEoECEEYAFDVDliGI2CQMGgCcAJ4AYABrAWIAe4ckgEKMC40LjEwLjUtMZgBAKABAbABD8gBCMABAQ&sclient=mobile-gws-wiz-serp#lpg=cid:CgIgAQ%3D%3D&wptab=s:H4sIAAAAAAAAAONgVuLVT9c3NCwwNUs3Syspe8RowS3w8sc9YSn9SWtOXmPU5OIKzsgvd80rySypFJLmYoOyBKX4uVB18uxi4sgvSy0qy0wtX8QqmpSYVZSYl66Qm1-SX1SsUJSYVZqTCAAh3kzIbwAAAA"> <i class="fas fa-map-marker-alt"></i> Rajula </a>
+<!--             <a href="#"> <i class="fas fa-map-marker-alt"></i> Una </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> surat </a> -->
+       
+        </div>
+
+        <div class="box">
+            <h3>To Reaching Us via Quick Links</h3>
+            <a href="https://www.facebook.com/profile.php?id=100064946431542"> <i class="fas fa-arrow-right"></i> Facebook Page </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Wattshapp </a>
+           
+            <a href="https://www.google.com/search?q=bajrang+motors+rajula&sxsrf=ALiCzsbdeDjqhj2eWrp-f4m3aGpiR6IVPQ%3A1655904040552&ei=KBezYruoIbKEr7wPx4misAQ&oq=BAJRANG+MOTORS&gs_lcp=ChNtb2JpbGUtZ3dzLXdpei1zZXJwEAEYADIECCMQJzIECCMQJzILCC4QgAQQxwEQrwEyCwguEIAEEMcBEK8BMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoHCAAQRxCwAzoHCCMQ6gIQJzoKCC4QxwEQrwEQJzoKCC4QxwEQ0QMQJzoECAAQQzoICAAQsQMQgwE6CwguEIAEELEDEIMBOgsILhCABBDHARCjAjoFCAAQkQI6CgguEMcBENEDEEM6CwgAEIAEELEDEIMBOhEILhCABBCxAxCDARDHARCjAjoICAAQgAQQyQM6BQgAEJIDOggIABCxAxCRAjoICC4QgAQQsQM6DgguEIAEELEDEIMBENQCOgUILhCABEoECEEYAFDVDliGI2CQMGgCcAJ4AYABrAWIAe4ckgEKMC40LjEwLjUtMZgBAKABAbABD8gBCMABAQ&sclient=mobile-gws-wiz-serp#lpg=cid:CgIgAQ%3D%3D&wptab=s:H4sIAAAAAAAAAONgVuLVT9c3NCwwNUs3Syspe8RowS3w8sc9YSn9SWtOXmPU5OIKzsgvd80rySypFJLmYoOyBKX4uVB18uxi4sgvSy0qy0wtX8QqmpSYVZSYl66Qm1-SX1SsUJSYVZqTCAAh3kzIbwAAAA"> <i class="fas fa-arrow-right"></i> Google Map </a>
+        
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +91 9825952459 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +91 9909190316 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> bajrangmotors5046@gmail.com </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Hindorna chokdi, rajula 365560 </a>
+        </div>
+
+        <div class="box">
+            <h3>Developer Contact &  Info.<i class="fas fa-code"></i></h3>
+            <a href="https://www.facebook.com/profile.php?id=100064946431542"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://mobile.twitter.com/DhruvTilva73"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.instagram.com/mr.perfect7383/"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://www.github.com/DhruvTilva"> <i class="fab fa-github"></i> GitHub </a>
+            <a href="https://www.linkedin.com/in/dhruv-tilva-205003218"> <i class="fab fa-linkedin"></i> LinkedIn </a>
+          
+          
+        </div>
+
+    </div>
+
+    <div class="credit"> created by  Dhruv Tilva (Enrollment:190430116142) | all rights reserved </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCxY07yo3Vb3dc6BgLu3rcCsdugbhOWUFU",
+      authDomain: "car-maintenance-r-services.firebaseapp.com",
+      projectId: "car-maintenance-r-services",
+      storageBucket: "car-maintenance-r-services.appspot.com",
+      messagingSenderId: "340562369397",
+      appId: "1:340562369397:web:952a402b4e73dd9505513c",
+      measurementId: "G-RK4HB9C9JP"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+</body>
+</html>

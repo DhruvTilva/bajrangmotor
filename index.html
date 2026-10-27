@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{name}} · Car Repair Workshop, Hindorna, Rajula</title>
+  <meta name="description" content="Serving Rajula for {{legacy.years}}+ years. {{name}} is a car repair workshop at {{address.street}}, {{address.city}}, Gujarat: computerised 3D wheel alignment, wheel balancing, tyre changing and everyday repairs. Call {{phone.display}}." />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta property="og:title" content="{{name}}, From broken to back on the road" />
+  <meta property="og:description" content="Car repair workshop at {{address.street}}, {{address.city}}, Gujarat." />
+  <meta property="og:image" content="/media/garage-front.webp" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preload" as="image" href="/media/garage-front-sm.webp" imagesrcset="/media/garage-front-sm.webp 720w, /media/garage-front.webp 1600w" imagesizes="100vw" />
+  <script>
+    // Motion classes are set before first paint so animated elements never flash.
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+    // Safety net: if the app script never starts, drop motion so nothing stays hidden.
+    setTimeout(function () { if (!document.documentElement.classList.contains('app-ready')) document.documentElement.classList.remove('motion'); }, 5000);
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "{{name}}",
+      "telephone": "{{phone.tel}}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{address.street}}, {{address.landmark}}",
+        "addressLocality": "{{address.city}}",
+        "postalCode": "{{address.pin}}",
+        "addressRegion": "{{address.state}}",
+        "addressCountry": "IN"
+      }
+    }
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ═════════════ NAVIGATION ═════════════ -->
+  <header class="nav" data-nav>
+    <a class="nav__brand brand" href="#top">
+      <svg class="mark" viewBox="-1.5 0 67 64" aria-hidden="true">
+        <path class="c__gear" d="M41.11 54.78 L38.21 56.10 L38.39 59.97 L30.92 61.44 L29.61 57.79 L23.29 57.16 L21.29 60.47 L14.26 57.55 L15.20 53.80 L10.28 49.76 L6.78 51.40 L2.55 45.07 L5.42 42.47 L3.57 36.38 L-0.25 35.81 L-0.25 28.19 L3.57 27.62 L5.42 21.53 L2.55 18.93 L6.78 12.60 L10.28 14.24 L15.20 10.20 L14.26 6.45 L21.29 3.53 L23.29 6.84 L29.61 6.21 L30.92 2.56 L38.39 4.03 L38.21 7.90 L41.11 9.22 L39.05 13.10 A21.4 21.4 0 1 0 39.05 50.90 Z"/>
+        <g class="c__car"><path d="M17.2 45.5V38Q17.2 35.4 19.3 34.4L21.8 26.6Q22.6 24.1 25.2 23.9H33.4Q36 24.1 36.8 26.6L39.3 34.4Q41.4 35.4 41.4 38V45.5Z"/><path d="M17.4 31.6H20.6L20.2 33.6H17.9Q16.9 33.6 16.9 32.6Q16.9 31.6 17.4 31.6Z M41.2 31.6H38L38.4 33.6H40.7Q41.7 33.6 41.7 32.6Q41.7 31.6 41.2 31.6Z"/><rect x="18.4" y="44" width="5" height="5" rx="1.3"/><rect x="35.2" y="44" width="5" height="5" rx="1.3"/></g><g class="c__cut"><path d="M23.5 33.2L25.3 27.6Q25.8 26.3 27.1 26.3H31.5Q32.8 26.3 33.3 27.6L35.1 33.2Z"/><path d="M19.6 37.6L25.2 38.9L24.6 40.7L20.4 40.1Q19.4 39.9 19.4 38.9Z M39 37.6L33.4 38.9L34 40.7L38.2 40.1Q39.2 39.9 39.2 38.9Z"/><rect x="26.4" y="41.2" width="5.8" height="2.2" rx="1.1"/></g>
+        <g class="c__spanner"><path d="M48.90 5.52A7 7 0 1 0 55.10 5.52L55.10 12.20L48.90 12.20Z"/><path d="M49.5 17.2H54.5L54.9 48.4H49.1Z"/><path d="M52 47.4a5.6 5.6 0 1 0 .01 0Z M52 50.6a2.4 2.4 0 1 1-.01 0Z" fill-rule="evenodd"/></g>
+      </svg>
+      <span class="brand__main" data-text="BAJRANG"><span class="sr-only">Bajrang Motors</span><span class="brand__letters" aria-hidden="true"><i style="--i:0">B</i><i style="--i:1">A</i><i style="--i:2">J</i><i style="--i:3">R</i><i style="--i:4">A</i><i style="--i:5">N</i><i style="--i:6">G</i></span></span>
+      <span class="brand__side" aria-hidden="true">
+        <span class="brand__sub">Motors</span>
+        <span class="brand__gu" lang="gu">{{nameGujarati}}</span>
+      </span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#garage">Garage</a>
+      <a href="#journey">Journey</a>
+      <a href="#services">Services</a>
+      <a href="#workshop">Workshop</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav__call btn btn--small" href="tel:{{phone.tel}}" data-magnetic data-cursor="Call">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" fill="currentColor"/></svg>
+      <span>{{phone.display}}</span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" data-menu-toggle>
+      <span class="sr-only">Menu</span><i></i><i></i>
+    </button>
+    <div class="nav__progress" aria-hidden="true"><i data-progress></i></div>
+  </header>
+
+  <div class="menu" id="menu" hidden data-menu>
+    <nav aria-label="Mobile">
+      <a href="#garage"><small>01</small>Garage</a>
+      <a href="#journey"><small>02</small>Journey</a>
+      <a href="#services"><small>03</small>Services</a>
+      <a href="#workshop"><small>04</small>Workshop</a>
+      <a href="#visit"><small>05</small>Visit</a>
+    </nav>
+    <div class="menu__contact">
+      <a href="tel:{{phone.tel}}">{{phone.display}}</a>
+      <a href="tel:{{phoneAlt.tel}}">{{phoneAlt.display}}</a>
+      <p>{{address.street}}, {{address.city}}</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ═════════════ 00 · HERO: arrival at the real garage ═════════════ -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+      <div class="hero__stage" aria-hidden="true">
+        <div class="hero__photo" data-hero-photo>
+          <img src="/media/garage-front-sm.webp" srcset="/media/garage-front-sm.webp 720w, /media/garage-front.webp 1600w" sizes="100vw" alt="" fetchpriority="high" width="1600" height="1626" />
+        </div>
+        <div class="hero__closeup" data-hero-closeup>
+          <img src="/media/alignment-rig.webp" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="hero__grade"></div>
+        <div class="hero__lamp" data-hero-lamp><i class="hero__tube"></i><i class="hero__cone"></i></div>
+        <canvas class="hero__dust" data-dust></canvas>
+        <div class="hero__floor"></div>
+        <div class="hero__car" data-hero-car><div data-car="hero"></div></div>
+      </div>
+
+      <div class="hero__content" data-hero-content>
+        <p class="eyebrow hero__eyebrow" data-hero-fade><span class="dot"></span>Car repair workshop · Hindorna, Rajula</p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="line"><span>From broken</span></span>
+          <span class="line"><span>to back on</span></span>
+          <span class="line"><span class="accent">the road.</span></span>
+        </h1>
+        <div class="hero__aside hero-card" data-hero-fade>
+          <div class="seal-row">
+            <div class="seal" aria-hidden="true">
+              <svg class="seal__ring" viewBox="0 0 200 200">
+                <defs><path id="seal-path" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0" /></defs>
+                <text><textPath href="#seal-path" textLength="532">{{legacy.tagline}} ✦ {{legacy.years}}+ years of trust ✦</textPath></text>
+              </svg>
+              <span class="seal__num">{{legacy.years}}<i>+</i></span>
+              <span class="seal__unit">Years</span>
+            </div>
+            <div class="seal-row__text">
+              <p class="seal-row__title">Trusted for <em>{{legacy.years}}+ years</em></p>
+              <p class="seal-row__sub">{{legacy.tagline}}</p>
+            </div>
+          </div>
+          <ul class="hero-points">
+            <li>Computerised 3D wheel alignment</li>
+            <li>Wheel balancing</li>
+            <li>Tyres &amp; everyday repairs</li>
+            <li class="hero-points__star">Best car advisor in Rajula</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="{{links.directions}}" target="_blank" rel="noopener" data-magnetic data-cursor="Map">Get directions</a>
+          </div>
+        </div>
+        <dl class="hero__meta" data-hero-fade>
+          <div><dt>Location</dt><dd>{{address.area}}</dd></div>
+          <div><dt>Landmark</dt><dd>{{address.landmark}}</dd></div>
+          <div class="hero__scroll"><dd><a href="#garage"><span>Scroll to explore</span><i aria-hidden="true"></i></a></dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__inside" data-hero-inside>
+        <p class="kicker">Step inside</p>
+        <p class="hero__inside-title">This is the real<br/><span lang="gu">{{nameGujarati}}</span></p>
+        <p class="caption">Real photo · the 3D alignment rig you can see from the forecourt</p>
+      </div>
+    </section>
+
+    <!-- ═════════════ 01 · THE REAL GARAGE ═════════════ -->
+    <section class="garage" id="garage" aria-labelledby="garage-title">
+      <div class="garage__watermark" aria-hidden="true" lang="gu" data-parallax="-12">{{nameGujarati}}</div>
+      <header class="section-head">
+        <p class="kicker" data-reveal>01 / The garage</p>
+        <h2 id="garage-title" class="display" data-split>Not a showroom.<br/><em>A working garage.</em></h2>
+      </header>
+      <div class="garage__grid">
+        <div class="garage__copy" data-reveal>
+          <p class="lead">{{name}} is an independent car repair workshop at {{address.street}}, {{address.city}}, {{address.landmark}}.</p>
+          <p>A blue steel shed. Open bays. Machines lined up along the wall, and cars waiting their turn on the forecourt. Everything on this page is built around the place itself. The photographs are real.</p>
+          <div class="legacy" data-reveal>
+            <p class="legacy__num" aria-label="{{legacy.years}} plus years"><span data-count-to="{{legacy.years}}">{{legacy.years}}</span><i>+</i></p>
+            <p class="legacy__text"><b>Years of trust</b>{{legacy.tagline}}.</p>
+          </div>
+        </div>
+        <figure class="photo garage__forecourt" data-reveal-photo>
+          <div class="photo__frame" data-parallax-img><img src="/media/garage-forecourt.webp" alt="Cars parked on the forecourt of Bajrang Motors in front of its two repair bays, with the shop sign above." loading="lazy" decoding="async" width="900" height="744" /></div>
+          <figcaption><span>Real photo</span>The forecourt. Cars waiting outside the bays.</figcaption>
+        </figure>
+        <figure class="photo garage__sign" data-reveal-photo>
+          <div class="photo__frame" data-parallax-img><img src="/media/roadside-sign.webp" alt="Roadside signboard for Bajrang Motors written in Gujarati, with an arrow pointing to the garage and two phone numbers." loading="lazy" decoding="async" width="1100" height="685" /></div>
+          <figcaption><span>Real photo</span>The board by the road. Here's what it says:</figcaption>
+        </figure>
+        <ol class="sign-read" aria-label="Translation of the roadside sign">
+          <li data-reveal><span lang="gu">બજરંગ મોટર્સ</span><b>Bajrang Motors</b></li>
+          <li data-reveal><span lang="gu">કોમ્પ્યુટરાઈઝ્ડ 3D વ્હીલ એલાઈમેન્ટ</span><b>Computerised 3D wheel alignment</b></li>
+          <li data-reveal><span lang="gu">કોમ્પ્યુટરાઈઝ્ડ વ્હીલ બેલેન્સીંગ</span><b>Computerised wheel balancing</b></li>
+          <li data-reveal><span lang="gu">ન્યુમેરીક ટાયર ચેન્જર</span><b>Numeric tyre changer</b></li>
+          <li data-reveal><span lang="gu">૯૮૨૫૯ ૫૨૪૫૯ · ૯૯૦૯૧ ૯૦૩૧૬</span><b><a href="tel:{{phone.tel}}">{{phone.display}}</a> · <a href="tel:{{phoneAlt.tel}}">{{phoneAlt.display}}</a></b></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═════════════ 02 · THE JOURNEY (signature sequence) ═════════════ -->
+    <section class="journey" id="journey" aria-labelledby="journey-title" data-journey>
+      <div class="journey__pin">
+        <div class="journey__backdrops" aria-hidden="true">
+          <img data-backdrop="0" src="/media/engine-bay-sm.webp" alt="" loading="lazy" decoding="async" />
+          <img data-backdrop="1" src="/media/alignment-rig-sm.webp" alt="" loading="lazy" decoding="async" />
+          <img data-backdrop="2" src="/media/tyre-bay-sm.webp" alt="" loading="lazy" decoding="async" />
+        </div>
+        
+        <header class="journey__head">
+          <p class="kicker">02 / The journey</p>
+          <h2 id="journey-title" class="journey__title">Every car<br/>has a story.</h2>
+        </header>
+
+        <ol class="journey__stages">
+          <li class="stage" data-stage>
+            <span class="stage__num">01</span>
+            <h3>The problem</h3>
+            <p>It starts small. A pull to the left. A shake at 80. A tyre that won't hold air. A light on the dashboard that won't go away.</p>
+            <small class="stage__photo">Backdrop: real photo, engine bay at Bajrang Motors</small>
+          </li>
+          <li class="stage" data-stage>
+            <span class="stage__num">02</span>
+            <h3>Inspection</h3>
+            <p>Before anything is fixed, it's checked. Wheel angles, tread, suspension, battery. Looking for the cause, not just the symptom.</p>
+            <small class="stage__photo">Backdrop: real photo, the 3D alignment rig</small>
+          </li>
+          <li class="stage" data-stage>
+            <span class="stage__num">03</span>
+            <h3>Repair</h3>
+            <p>On the machines along the blue wall: the alignment rig, the wheel balancer, the tyre changer. Then the hands-on work in the bays.</p>
+            <small class="stage__photo">Backdrop: real photo, balancer &amp; tyre changers</small>
+          </li>
+          <li class="stage" data-stage>
+            <span class="stage__num">04</span>
+            <h3>Ready</h3>
+            <p>Level. Balanced. Aligned. The car that came in limping goes out standing straight.</p>
+          </li>
+          <li class="stage" data-stage>
+            <span class="stage__num">05</span>
+            <h3>Back on the road</h3>
+            <p>Straight steering, no shake, nothing on the dashboard. Just the road ahead.</p>
+          </li>
+        </ol>
+
+        <div class="journey__rail" aria-hidden="true"><i data-rail></i></div>
+
+        <div class="journey__scene" aria-hidden="true">
+          <div class="journey__car" data-car="journey"></div>
+          <svg class="journey__overlay" viewBox="0 0 2284 1219" data-overlay>
+            <g class="ov-scan" data-ov="scan"><rect x="-10" y="0" width="20" height="1219" /></g>
+            <g class="ov-dims" data-ov="dims">
+              <path class="ov-dim" d="M 172 738 L 1106 978" />
+              <text x="560" y="900" text-anchor="middle">Wheelbase</text>
+              <path class="ov-dim" d="M 1106 760 V 1200 M 1106 800 L 1160 1190" />
+              <text x="1190" y="770">Camber / toe</text>
+              <path class="ov-dim" d="M 1010 1140 L 860 1190 H 760" />
+              <text x="748" y="1200" text-anchor="end">Tread</text>
+              <path class="ov-dim" d="M 1060 770 L 960 560 H 830" />
+              <text x="818" y="570" text-anchor="end">Suspension</text>
+              <path class="ov-dim" d="M 1470 700 L 1380 420 H 1250" />
+              <text x="1238" y="430" text-anchor="end">Battery</text>
+            </g>
+            <g class="ov-warn" data-ov="warn">
+              <g class="ov-pin" transform="translate(1106 1150)"><circle r="38"/><path d="M0 -17 L17 13 H-17 Z"/><text y="88" text-anchor="middle">Tyre pressure</text></g>
+              <g class="ov-pin" transform="translate(1650 500)"><circle r="38"/><path d="M0 -17 L17 13 H-17 Z"/><text y="-58" text-anchor="middle">Warning light</text></g>
+              <g class="ov-pin" transform="translate(172 738)"><circle r="38"/><path d="M0 -17 L17 13 H-17 Z"/><text y="-58" text-anchor="middle">Vibration</text></g>
+            </g>
+            <g class="ov-ok" data-ov="ok">
+              <g class="ov-pin ov-pin--ok" transform="translate(1106 1150)"><circle r="38"/><path d="M-15 0 L-4 11 L17 -11"/></g>
+              <g class="ov-pin ov-pin--ok" transform="translate(1650 500)"><circle r="38"/><path d="M-15 0 L-4 11 L17 -11"/></g>
+              <g class="ov-pin ov-pin--ok" transform="translate(172 738)"><circle r="38"/><path d="M-15 0 L-4 11 L17 -11"/></g>
+            </g>
+          </svg>
+          <div class="journey__sweep" data-sweep></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════ 03 · SERVICE EXPLORER ═════════════ -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <header class="section-head section-head--split">
+        <div>
+          <p class="kicker" data-reveal>03 / Service explorer</p>
+          <h2 id="services-title" class="display" data-split>Point at the car.<br/><em>Find the fix.</em></h2>
+        </div>
+        <p class="section-head__aside" data-reveal><span class="only-hover">Move over the car or pick from the list.</span><span class="only-touch">Tap a point on the car or pick from the list.</span> Services marked <b class="tag">On the board</b> are painted on our roadside sign.</p>
+      </header>
+      <div class="explorer" data-explorer>
+        <div class="explorer__stage">
+          <div class="explorer__car" data-car="services"></div>
+          <div class="explorer__hotspots" data-hotspots></div>
+        </div>
+        <div class="explorer__list" role="tablist" aria-label="Services" data-service-tabs></div>
+        <div class="explorer__panel" role="tabpanel" data-service-panel tabindex="0"></div>
+      </div>
+      <p class="services__note" data-reveal>Not sure which one you need? <a href="tel:{{phone.tel}}">Call {{phone.display}}</a> and describe what the car is doing.</p>
+    </section>
+
+    <!-- ═════════════ 04 · WORKSHOP & CRAFT ═════════════ -->
+    <section class="workshop" id="workshop" aria-labelledby="workshop-title">
+      <header class="section-head">
+        <p class="kicker" data-reveal>04 / The workshop</p>
+        <h2 id="workshop-title" class="display" data-split>The machines.<br/><em>The hands.</em></h2>
+      </header>
+      <p class="workshop__intro" data-reveal>No stock photos of shiny service centres. These are the bays and the equipment at {{name}}. <span class="only-hover">Hover a photo to look closer.</span></p>
+      <div class="workshop__grid">
+        <figure class="photo workshop__item workshop__item--a" data-reveal-photo>
+          <div class="photo__frame" data-loupe><img src="/media/alignment-rig.webp" alt="Wheel alignment equipment on a blue wall: a camera beam with a green light, four dotted wheel targets and a monitor on a red stand." loading="lazy" decoding="async" width="1600" height="1285" /></div>
+          <figcaption><span>Alignment</span>The 3D alignment rig: camera beam, four wheel targets and the screen that reads them.</figcaption>
+        </figure>
+        <figure class="photo workshop__item workshop__item--b" data-reveal-photo>
+          <div class="photo__frame" data-loupe><img src="/media/tyre-bay.webp" alt="Red wheel balancer and tyre changer machines along a blue wall, with stacked tyres and an air compressor." loading="lazy" decoding="async" width="1200" height="1268" /></div>
+          <figcaption><span>Tyres &amp; balancing</span>Wheel balancer and tyre changers along the blue wall, compressor at the end.</figcaption>
+        </figure>
+        <figure class="photo workshop__item workshop__item--c" data-reveal-photo>
+          <div class="photo__frame" data-loupe><img src="/media/engine-bay.webp" alt="Inside the workshop: a silver sedan with its bonnet open, tyre machines on the left and a mechanic working by the far wall." loading="lazy" decoding="async" width="1400" height="1117" /></div>
+          <figcaption><span>Repair bay</span>A customer's sedan in for engine work, bonnet up. Work carrying on at the far wall.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═════════════ 05 · TRUST: check us out, then visit ═════════════ -->
+    <section class="trust" id="trust" aria-labelledby="trust-title">
+      <header class="section-head">
+        <p class="kicker" data-reveal>05 / Before you come in</p>
+        <h2 id="trust-title" class="display" data-split>Check us out.<br/><em>Then come in.</em></h2>
+      </header>
+      <div class="trust__grid">
+        <div class="trust__links">
+          <p class="trust__label" data-reveal>Read what customers say</p>
+          <a class="link-card" href="{{links.maps}}" target="_blank" rel="noopener" data-reveal data-cursor="Open">
+            <span class="link-card__k">Google Maps</span><span class="link-card__t">Reviews &amp; photos</span><span class="link-card__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="link-card" href="{{links.justdial}}" target="_blank" rel="noopener" data-reveal data-cursor="Open">
+            <span class="link-card__k">Justdial</span><span class="link-card__t">Listing &amp; ratings</span><span class="link-card__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="link-card" href="{{links.facebook}}" target="_blank" rel="noopener" data-reveal data-cursor="Open">
+            <span class="link-card__k">Facebook</span><span class="link-card__t">Workshop page</span><span class="link-card__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="trust__checklist">
+          <p class="trust__label" data-reveal>Helps us help you faster</p>
+          <ol>
+            <li data-reveal><b>Notice when it happens.</b> At speed, while braking, when turning, on a cold start?</li>
+            <li data-reveal><b>Listen and look.</b> A noise, a smell, a light on the dashboard. Tell us all of it.</li>
+            <li data-reveal><b>Bring the service book</b> if you have one, so we know what was done last.</li>
+            <li data-reveal><b>Call ahead</b> on <a href="tel:{{phone.tel}}">{{phone.display}}</a> to check timings before you drive over.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="reviews" data-reviews hidden></div>
+    </section>
+
+    <!-- ═════════════ 06 · VISIT ═════════════ -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit__info">
+        <p class="kicker" data-reveal>06 / Visit</p>
+        <h2 id="visit-title" class="display" data-split>Find the<br/><em>blue shed.</em></h2>
+        <address class="visit__address" data-reveal>
+          <strong>{{name}}</strong>
+          {{address.street}}<br/>{{address.landmark}}<br/>{{address.city}}, {{address.state}} {{address.pin}}
+        </address>
+        <dl class="visit__facts" data-reveal>
+          <div><dt>Phone</dt><dd><a href="tel:{{phone.tel}}">{{phone.display}}</a><a href="tel:{{phoneAlt.tel}}">{{phoneAlt.display}}</a></dd></div>
+          <div><dt>Hours</dt><dd>{{hours.days}}<br/>{{hours.time}}<small>{{hoursNote}}</small></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        </dl>
+        <div class="btn-row" data-reveal>
+          <a class="btn btn--primary" href="{{links.directions}}" target="_blank" rel="noopener" data-magnetic data-cursor="Go">Get directions</a>
+          <a class="btn btn--ghost" href="tel:{{phone.tel}}" data-magnetic data-cursor="Call">Call the garage</a>
+          <a class="btn btn--ghost" href="{{whatsappUrl}}" target="_blank" rel="noopener" data-whatsapp hidden>WhatsApp</a>
+        </div>
+      </div>
+      <div class="visit__map" data-reveal-photo>
+        <iframe title="Map showing {{name}} in {{address.city}}" src="{{links.mapEmbed}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <div class="visit__map-tag"><span>{{address.area}}</span><span>Gujarat</span></div>
+      </div>
+    </section>
+
+    <!-- ═════════════ 07 · THE FILM: broken → road-ready ═════════════ -->
+    <section class="film" id="film" aria-labelledby="film-title" data-film>
+      <header class="section-head section-head--split">
+        <div>
+          <p class="kicker" data-reveal>07 / The film</p>
+          <h2 id="film-title" class="display" data-split>Broken in.<br/><em>Road-ready out.</em></h2>
+        </div>
+        <p class="section-head__aside" data-reveal>Twenty-four seconds at Bajrang Motors: a tired, dented car rolls up to our real blue shed, gets inspected, put right and sent back on the road.</p>
+      </header>
+      <div class="film__frame" data-reveal-photo>
+        <video class="film__video" data-film-video muted loop playsinline autoplay preload="none"
+          poster="/media/film/bajrang-motors-transformation-poster.jpg"
+          data-src="/media/film/bajrang-motors-transformation.mp4"
+          data-src-small="/media/film/bajrang-motors-transformation-720p.mp4"
+          aria-label="Film: a damaged white hatchback arrives at Bajrang Motors, is inspected and restored, and drives off at sunset."></video>
+        <button class="film__play" type="button" data-film-play hidden><span aria-hidden="true">▶</span> Play film</button>
+      </div>
+      <div class="film__cta" data-reveal>
+        <p>Let's get you back on the road.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="tel:{{phone.tel}}" data-magnetic data-cursor="Call">Call {{phone.display}}</a>
+          <a class="btn btn--ghost" href="{{links.directions}}" target="_blank" rel="noopener" data-magnetic data-cursor="Go">Get directions</a>
+        </div>
+      </div>
+      <p class="film__note" data-reveal>Illustrative film: a 3D car composited onto real photographs of the workshop.</p>
+    </section>
+
+    <!-- ═════════════ 07 · CLOSING SCENE ═════════════ -->
+    <section class="closing" id="closing" aria-labelledby="closing-title" data-closing>
+      <div class="road road--closing" aria-hidden="true">
+        <div class="road__sky"></div>
+        <div class="road__sun"></div>
+        <div class="road__hills" data-road-layer="hills"></div>
+        <div class="road__poles" data-road-layer="poles"></div>
+        <div class="road__surface"></div>
+      </div>
+      <div class="closing__car" data-closing-car aria-hidden="true"><div data-car="closing"></div></div>
+      <canvas class="drive__canvas" data-drive-canvas aria-hidden="true"></canvas>
+      <p class="drive__caption" aria-hidden="true" data-drive-caption><span data-drive-index>01</span><b data-drive-shot>Front three-quarter</b></p>
+      <div class="closing__content">
+        <p class="kicker" data-reveal>Your journey doesn't stop here</p>
+        <h2 id="closing-title" class="closing__title" data-split>Let's get you<br/>back on the road.</h2>
+        <div class="btn-row" data-reveal>
+          <a class="btn btn--primary" href="tel:{{phone.tel}}" data-magnetic data-cursor="Call">Call {{phone.display}}</a>
+          <a class="btn btn--ghost" href="{{links.directions}}" target="_blank" rel="noopener" data-magnetic data-cursor="Go">Get directions</a>
+          <a class="btn btn--ghost" href="{{whatsappUrl}}" target="_blank" rel="noopener" data-whatsapp hidden>WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════ FOOTER ═════════════ -->
+  <footer class="footer">
+    <div class="footer__brand">
+      <div class="footer__top">
+      <div class="footer__mark">
+        <svg class="mark mark--large" viewBox="-1.5 0 67 64" aria-hidden="true">
+          <path class="c__gear" d="M41.11 54.78 L38.21 56.10 L38.39 59.97 L30.92 61.44 L29.61 57.79 L23.29 57.16 L21.29 60.47 L14.26 57.55 L15.20 53.80 L10.28 49.76 L6.78 51.40 L2.55 45.07 L5.42 42.47 L3.57 36.38 L-0.25 35.81 L-0.25 28.19 L3.57 27.62 L5.42 21.53 L2.55 18.93 L6.78 12.60 L10.28 14.24 L15.20 10.20 L14.26 6.45 L21.29 3.53 L23.29 6.84 L29.61 6.21 L30.92 2.56 L38.39 4.03 L38.21 7.90 L41.11 9.22 L39.05 13.10 A21.4 21.4 0 1 0 39.05 50.90 Z"/>
+          <g class="c__car"><path d="M17.2 45.5V38Q17.2 35.4 19.3 34.4L21.8 26.6Q22.6 24.1 25.2 23.9H33.4Q36 24.1 36.8 26.6L39.3 34.4Q41.4 35.4 41.4 38V45.5Z"/><path d="M17.4 31.6H20.6L20.2 33.6H17.9Q16.9 33.6 16.9 32.6Q16.9 31.6 17.4 31.6Z M41.2 31.6H38L38.4 33.6H40.7Q41.7 33.6 41.7 32.6Q41.7 31.6 41.2 31.6Z"/><rect x="18.4" y="44" width="5" height="5" rx="1.3"/><rect x="35.2" y="44" width="5" height="5" rx="1.3"/></g><g class="c__cut"><path d="M23.5 33.2L25.3 27.6Q25.8 26.3 27.1 26.3H31.5Q32.8 26.3 33.3 27.6L35.1 33.2Z"/><path d="M19.6 37.6L25.2 38.9L24.6 40.7L20.4 40.1Q19.4 39.9 19.4 38.9Z M39 37.6L33.4 38.9L34 40.7L38.2 40.1Q39.2 39.9 39.2 38.9Z"/><rect x="26.4" y="41.2" width="5.8" height="2.2" rx="1.1"/></g>
+          <g class="c__spanner"><path d="M48.90 5.52A7 7 0 1 0 55.10 5.52L55.10 12.20L48.90 12.20Z"/><path d="M49.5 17.2H54.5L54.9 48.4H49.1Z"/><path d="M52 47.4a5.6 5.6 0 1 0 .01 0Z M52 50.6a2.4 2.4 0 1 1-.01 0Z" fill-rule="evenodd"/></g>
+        </svg>
+        <p class="footer__mark-read"><b>Bajrang Motors</b><span lang="gu">{{nameGujarati}}</span><span>Serving Rajula for {{legacy.years}}+ years</span></p>
+      </div>
+      <div class="rig" data-rig aria-label="Alignment and balancing readout, illustrative">
+        <p class="rig__title"><span class="rig__dot"></span>3D alignment &amp; balancing </p>
+        <div class="rig__row">
+          <div class="rig__g" data-gauge data-start="-1.8" data-end="-0.3" data-min="-2.5" data-max="1.5" data-lo="-0.8" data-hi="0.2">
+            <p class="rig__label">Camber</p>
+            <svg class="rig__dial" viewBox="0 0 120 70" aria-hidden="true">
+              <path class="rig__arc" d="M10 62A50 50 0 0 1 110 62" />
+              <path class="rig__spec" d="" />
+              <line class="rig__needle" x1="60" y1="62" x2="60" y2="20" />
+              <circle class="rig__hub" cx="60" cy="62" r="4" />
+            </svg>
+            <p class="rig__val"><b data-val>-0.3</b><span>°</span></p>
+            <p class="rig__state" data-state>In spec</p>
+          </div>
+          <div class="rig__g" data-gauge data-start="0.62" data-end="0.06" data-min="-0.4" data-max="0.8" data-lo="-0.1" data-hi="0.2">
+            <p class="rig__label">Toe</p>
+            <svg class="rig__dial" viewBox="0 0 120 70" aria-hidden="true">
+              <path class="rig__arc" d="M10 62A50 50 0 0 1 110 62" />
+              <path class="rig__spec" d="" />
+              <line class="rig__needle" x1="60" y1="62" x2="60" y2="20" />
+              <circle class="rig__hub" cx="60" cy="62" r="4" />
+            </svg>
+            <p class="rig__val"><b data-val>0.06</b><span>°</span></p>
+            <p class="rig__state" data-state>In spec</p>
+          </div>
+          <div class="rig__g" data-gauge data-start="2.1" data-end="4.4" data-min="1" data-max="6" data-lo="3.8" data-hi="5.2">
+            <p class="rig__label">Caster</p>
+            <svg class="rig__dial" viewBox="0 0 120 70" aria-hidden="true">
+              <path class="rig__arc" d="M10 62A50 50 0 0 1 110 62" />
+              <path class="rig__spec" d="" />
+              <line class="rig__needle" x1="60" y1="62" x2="60" y2="20" />
+              <circle class="rig__hub" cx="60" cy="62" r="4" />
+            </svg>
+            <p class="rig__val"><b data-val>4.4</b><span>°</span></p>
+            <p class="rig__state" data-state>In spec</p>
+          </div>
+          <div class="rig__g rig__g--bal" data-balance>
+            <p class="rig__label">Wheel balance</p>
+            <svg class="rig__wheel" viewBox="0 0 80 80" aria-hidden="true">
+              <circle class="rig__tyre" cx="40" cy="40" r="34" />
+              <g class="rig__spin" data-spin>
+                <circle class="rig__rim" cx="40" cy="40" r="20" />
+                <path class="rig__spokes" d="M40 22V58M22 40H58M27.3 27.3L52.7 52.7M52.7 27.3L27.3 52.7" />
+                <circle class="rig__weight" cx="40" cy="13" r="3.4" data-weight />
+              </g>
+              <circle class="rig__hub" cx="40" cy="40" r="4" />
+            </svg>
+            <p class="rig__val"><b data-grams>0</b><span>g</span></p>
+            <p class="rig__state" data-bstate>Balanced</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <p class="footer__word" aria-hidden="true">Bajrang</p>
+      <p class="footer__gu" lang="gu">{{nameGujarati}}</p>
+      <p class="footer__legacy">Serving Rajula for {{legacy.years}}+ years</p>
+    </div>
+    <div class="footer__cols">
+      <div>
+        <h3>Workshop</h3>
+        <p>{{address.street}}<br/>{{address.landmark}}<br/>{{address.city}} {{address.pin}}, {{address.state}}</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:{{phone.tel}}">{{phone.display}}</a><br/><a href="tel:{{phoneAlt.tel}}">{{phoneAlt.display}}</a><br/><a href="mailto:{{email}}">{{email}}</a></p>
+      </div>
+      <div>
+        <h3>Elsewhere</h3>
+        <p><a href="{{links.maps}}" target="_blank" rel="noopener">Google Maps</a><br/><a href="{{links.justdial}}" target="_blank" rel="noopener">Justdial</a><br/><a href="{{links.facebook}}" target="_blank" rel="noopener">Facebook</a><br/><a href="{{links.enquiryForm}}" target="_blank" rel="noopener">Online enquiry form</a></p>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>{{hours.days}}<br/>{{hours.time}}<br/><small>{{hoursNote}}</small></p>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© {{year}} {{name}}, {{address.city}}</span>
+      <span><a href="/credits.html">Credits</a> · Website by <a href="{{developer.url}}" target="_blank" rel="noopener">{{developer.name}}</a></span>
+    </div>
+  </footer>
+
+  <!-- Mobile quick actions -->
+  <div class="quickbar" data-quickbar>
+    <a href="tel:{{phone.tel}}">Call</a>
+    <a href="{{links.directions}}" target="_blank" rel="noopener">Directions</a>
+    <a href="{{whatsappUrl}}" target="_blank" rel="noopener" data-whatsapp hidden>WhatsApp</a>
+  </div>
+
+  <div class="cursor" aria-hidden="true" data-cursor-el><span></span></div>
+</body>
+</html>
