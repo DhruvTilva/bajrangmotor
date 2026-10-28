@@ -21,5 +21,6 @@ function businessTokens() {
 export default defineConfig({
   plugins: [businessTokens()],
   server: { port: 5173 },
+  preview: { allowedHosts: ['bajrangmotor.onrender.com'] },
   build: { rollupOptions: { input: { main: 'index.html', credits: 'credits.html' } } },
 });
